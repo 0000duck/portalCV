@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Shared", "5.Shared", "{93CDD442-9ABC-4BDE-95D5-30781BB635E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Test", "6.Test", "{2C71169B-30CD-4B1C-B181-DF834EA9C355}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\jpvicente\Desktop\CV.sql = C:\Users\jpvicente\Desktop\CV.sql
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.Model", "Arvato.PortalCandidato.Model\Arvato.PortalCandidato.Model.csproj", "{9AC4E080-8077-48C7-B924-AD9F86B9D332}"
 EndProject
@@ -36,11 +39,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Consola", "7.Consola", "{87B9318A-1808-4A67-8446-47E36FD5A094}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.AppConsola", "Arvato.PortalCandidato.AppConsola\Arvato.PortalCandidato.AppConsola.csproj", "{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B24844E-9985-4115-8126-C145BAD86C6F}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\jpvicente\Desktop\CV.sql = C:\Users\jpvicente\Desktop\CV.sql
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
