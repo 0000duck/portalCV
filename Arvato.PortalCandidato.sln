@@ -37,6 +37,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Consola", "7.Consola", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.AppConsola", "Arvato.PortalCandidato.AppConsola\Arvato.PortalCandidato.AppConsola.csproj", "{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B24844E-9985-4115-8126-C145BAD86C6F}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\jpvicente\Desktop\CV.sql = C:\Users\jpvicente\Desktop\CV.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -182,51 +187,5 @@ Global
 		{75A1CA4B-5085-4128-841D-0F3C0F07999F} = {85280236-213E-426A-BF82-BAF4E03C446F}
 		{FCD5CFB1-210A-46EF-9753-906AB372620D} = {F18B39FA-E19F-4AE0-95A8-630291FE817E}
 		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1} = {87B9318A-1808-4A67-8446-47E36FD5A094}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://10.20.56.120:8080/tfs/arvatocrm
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Arvato.PortalCandadato.Shared.DTO\\Arvato.PortalCandadato.Shared.DTO.csproj
-		SccProjectTopLevelParentUniqueName1 = Arvato.PortalCandidato.sln
-		SccProjectName1 = Arvato.PortalCandadato.Shared.DTO
-		SccLocalPath1 = Arvato.PortalCandadato.Shared.DTO
-		SccProjectUniqueName2 = Arvato.PortalCandidato.Api2connect\\Api2connect\\Api2connect.csproj
-		SccProjectTopLevelParentUniqueName2 = Arvato.PortalCandidato.sln
-		SccProjectName2 = Arvato.PortalCandidato.Api2connect/Api2connect
-		SccLocalPath2 = Arvato.PortalCandidato.Api2connect\\Api2connect
-		SccProjectUniqueName3 = Arvato.PortalCandidato.Api\\Arvato.PortalCandidato.Api.csproj
-		SccProjectTopLevelParentUniqueName3 = Arvato.PortalCandidato.sln
-		SccProjectName3 = Arvato.PortalCandidato.Api
-		SccLocalPath3 = Arvato.PortalCandidato.Api
-		SccProjectUniqueName4 = Arvato.PortalCandidato.Model.Client\\Arvato.PortalCandidato.UI.Service.csproj
-		SccProjectTopLevelParentUniqueName4 = Arvato.PortalCandidato.sln
-		SccProjectName4 = Arvato.PortalCandidato.Model.Client
-		SccLocalPath4 = Arvato.PortalCandidato.Model.Client
-		SccProjectUniqueName5 = Arvato.PortalCandidato.Model\\Arvato.PortalCandidato.Model.csproj
-		SccProjectTopLevelParentUniqueName5 = Arvato.PortalCandidato.sln
-		SccProjectName5 = Arvato.PortalCandidato.Model
-		SccLocalPath5 = Arvato.PortalCandidato.Model
-		SccProjectUniqueName6 = Arvato.PortalCandidato.Service\\Arvato.PortalCandidato.Service.csproj
-		SccProjectTopLevelParentUniqueName6 = Arvato.PortalCandidato.sln
-		SccProjectName6 = Arvato.PortalCandidato.Service
-		SccLocalPath6 = Arvato.PortalCandidato.Service
-		SccProjectUniqueName7 = Arvato.PortalCandidato.UI.ServiceLogin\\Arvato.PortalCandidato.UI.ServiceLogin.csproj
-		SccProjectTopLevelParentUniqueName7 = Arvato.PortalCandidato.sln
-		SccProjectName7 = Arvato.PortalCandidato.UI.ServiceLogin
-		SccLocalPath7 = Arvato.PortalCandidato.UI.ServiceLogin
-		SccProjectUniqueName8 = Arvato.PortalCandidato.UI\\Arvato.PortalCandidato.UI.csproj
-		SccProjectTopLevelParentUniqueName8 = Arvato.PortalCandidato.sln
-		SccProjectName8 = Arvato.PortalCandidato.UI
-		SccLocalPath8 = Arvato.PortalCandidato.UI
-		SccProjectUniqueName9 = Arvato.PortalCandidatoAdmin.UI\\Arvato.PortalCandidatoAdmin.UI.csproj
-		SccProjectTopLevelParentUniqueName9 = Arvato.PortalCandidato.sln
-		SccProjectName9 = Arvato.PortalCandidatoAdmin.UI
-		SccLocalPath9 = Arvato.PortalCandidatoAdmin.UI
-		SccProjectUniqueName10 = Arvato.PortalCandidato.AppConsola\\Arvato.PortalCandidato.AppConsola.csproj
-		SccProjectTopLevelParentUniqueName10 = Arvato.PortalCandidato.sln
-		SccProjectName10 = Arvato.PortalCandidato.AppConsola
-		SccLocalPath10 = Arvato.PortalCandidato.AppConsola
 	EndGlobalSection
 EndGlobal
