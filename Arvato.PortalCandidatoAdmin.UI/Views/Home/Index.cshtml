@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = Resources.Language.Principal;
+    ViewBag.Titulo = Resources.Language.Bienvenidos;
+}
+
+@section styles{
+    <link href="~/Content/libs/morris.css" rel="stylesheet" />
+    <link href="~/Content/views/Home/Home.css" rel="stylesheet" />
+}
+<div id="formulario" class="container">
+</div>
+
+
+
+
+
+@section scripts{
+ 
+    <script src="~/Scripts/Views/Home/HomeController.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            HomeController.init('#formulario'); 
+        });
+    </script>
+}
+
+

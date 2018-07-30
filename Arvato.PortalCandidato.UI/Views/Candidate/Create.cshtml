@@ -1,0 +1,178 @@
+﻿@model Arvato.PortalCandadato.Shared.DTO.CandidateDTO
+@{
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+
+    <h2>@ViewBag.Title</h2>
+    @*@using (Ajax.BeginForm("Create", "Candidate", new AjaxOptions { HttpMethod = "Post" }, new { id = "formulario", enctype = "multipart/form-data" }))
+        {
+        @Html.AntiForgeryToken()*@
+<form id = "formulario">
+
+    <div class="form-group">
+
+        <hr />
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.nombre</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line"
+                       id="Name" name="Name"
+                       type="text"
+                       value=""
+                       placeholder=@Resources.Language.ph_nombre>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2"> @Resources.Language.apellidos</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line"
+                       id="Surname" name="Surname"
+                       type="text"
+                       value=""
+                       placeholder=@Resources.Language.ph_apellidos>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.sel_regiones</label>
+            <div class="form-group-select2">
+                <div class="col-md-10" id="IdRegioness">
+                    @Html.DropDownList("Regiones", (IEnumerable<SelectListItem>)ViewBag.regiones, htmlAttributes: new { @class = "form-control js-multiple-original", @id = "IdRegiones",  @multiple = "multiple" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.telefono</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line"
+                       id="Telephone" name="Telephone"
+                       type="text"
+                       value=""
+                       placeholder=@Resources.Language.telefono>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.email</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line"
+                       id="Email" name="Email"
+                       type="email"
+                       value=""
+                       placeholder=@Resources.Language.ph_email>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.sel_archivo</label>
+            <div class="col-md-10">
+                <div class="input-group" id="IdInputExaminar">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" id="btnExaminar" type="button">@Resources.Language.examinar</button>
+                    </span>
+                    <input type="text" class="form-control" id="nameArchivo" disabled="disabled">
+                    <input enctype="multipart/form-data" type="file" id="archivo" name="archivo" style="display: none" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">@Resources.Language.declaracion</label>
+            <div class="col-md-5">
+                <div class="checkbohx" id="IdCheckPolitica">
+                    <input type="checkbox" id="idCheck" />
+                    <label for="idCheck" id="idPolitica">
+                         @Resources.Language.politica
+                        @*@Resources.Language.leido @Html.ActionLink(Resources.Language.politica, "Index", "Politica", null, htmlAttributes: new { @target = "black" }) @Resources.Language.acepto*@
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group" >
+            <div class="col-md-10" id="captcha" >
+                <div class="g-recaptcha" data-sitekey="6LdhDmMUAAAAALdTD55Dyp8ZZpiPcDaafq8Ffk5u"></div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="button" value=@Resources.Language.enviar id="idEnviarForm" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+    @* }*@
+
+<div class="row">
+    <div class="col col-sm-12" id="spiner"></div>
+
+</div>
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title"></h3>
+            </div>
+            <div id="contenedorModalAlertas" class="modal-body">
+                <span></span>
+                <div id="AlertKO" class="alert alert-danger" role="alert">
+                    Error al guardar el Candidato
+                </div>
+                <div id="AlertOK" class="alert alert-success" role="alert">
+                    Candidato guardado correctamente
+                </div>
+            </div>
+
+           
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+    @* Modal de la politica *@
+    <div class="modal largeModal fade" id="idModalPolitica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog largeModal">
+            <div class="modal-content largeModal">
+                <div class="modal-header largeModal">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title largeModal"></h3>
+                </div>
+                <div id="contentDetalleMonitoModal" class="modal-body largeModal">
+                    <span>
+                        Política de cookies
+
+
+                        El acceso a esta página web puede implicar la utilización de “cookies”.
+
+                        Una “Cookie” es un pequeño archivo que se almacena en el ordenador del usuario y nos permite reconocerle. El conjunto de “cookies” nos ayuda a mejorar la calidad de nuestra web, permitiéndonos controlar qué páginas encuentran nuestros usuarios útiles y cuáles no.
+
+                        Las cookies son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitándole la navegación y usabilidad de nuestra web. Tenga en cuenta que las cookies no pueden dañar su equipo y que, a cambio, el que estén activadas nos ayudan a identificar y resolver los errores.
+
+                        La información que le proporcionamos a continuación, le ayudará a comprender los diferentes tipos de cookies:
+                        ◦Cookies de sesión: son cookies temporales que permanecen en el archivo de cookies de su navegador hasta que abandone la página web, por lo que ninguna queda registrada en el disco duro del usuario. La información obtenida por medio de estas cookies, sirven para analizar pautas de tráfico en la web. A la larga, esto nos permite proporcionar una mejor experiencia para mejorar el contenido y facilitando su uso.
+                        ◦Cookies permanentes: son almacenadas en el disco duro y nuestra web las lee cada vez que usted realiza una nueva visita. Una web permanente posee una fecha de expiración determinada. La cookie dejará de funcionar después de esa fecha. Las utilizamos, generalmente, para facilitar los servicios de compra y registro.
+
+
+                        A continuación publicamos una relación de las principales cookies utilizadas en nuestras web´s, distinguiendo:
+                        ◦Las cookies estrictamente necesarias como por ejemplo, aquellas que sirvan para una correcta navegación o las que permitan realizar el pago de bienes o servicios solicitados por el usuario o cookies que sirvan para asegurar que el contenido de la página web se carga eficazmente.
+                        ◦Las cookies de terceros como por ejemplo, las usadas por redes sociales, o por complementos externos de contenido como google maps.
+                    </span>
+                    Esta es la politica
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/Candidate")
+
+    }

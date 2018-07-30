@@ -1,0 +1,109 @@
+﻿@using Arvato.PortalCandidato.UI.FrameworkExtensions
+@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>@ViewBag.Title - Template Arvato Bertelsmann 2017</title>
+
+    @Styles.Render("~/Styles/css")
+
+    <!-- Favicon -->
+    <link type="image/x-icon" href="@Url.Content("~/Content/favicon.png")" rel="shortcut icon" />
+
+    <!-- google font libraries -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+    <link href="~/Content/arvato/arvato-style-static.css" rel="stylesheet" />
+    <!-- this page specific inline scripts -->
+    @RenderSection("styles", required: false)
+
+    <script>
+        var baseController = '@ViewContext.RouteData.Values["controller"]';
+        var baseRelativeURL = '@Url.Content("~/")';
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="/Scripts/html5shiv.js"></script>
+        <script src="/Scripts/respond.min.js"></script>
+        <script src="~/Scripts/jquery.xdomainrequest.min.js"></script>
+    <![endif]-->
+
+    <meta name="description" content="Arvato CMS" />
+    @*CAPCHA GOOGLE*@
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="fixed-header fixed-leftmenu scrollbar">
+    <div id="theme-wrapper">
+        <header class="navbar navbar-default navbar-fixed-top" id="header-navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <a href="@Url.Action("Index", "Home")" id="logo" class="navbar-brand">
+                            <img id="imageLogo" src="@Url.Content("~/img/logo.png")" alt="" class="normal-logo logo-white" />
+                            <img id="imageLogoSmall" src="@Url.Content("~/img/logo-small-black.png")" alt="" class="small-logo logo-white hide" />
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        @using (Ajax.BeginForm("CreateIdioma", "Candidate", new AjaxOptions { HttpMethod = "Get" }))
+                        {
+                          
+                                <div class="form-group has-feedback">
+                                    <label>@Resources.Language.idioma</label>
+                                    @Html.DropDownList("Idioma", (IEnumerable<SelectListItem>)ViewBag.idiomas, new { @id = "txtIdioma", @class = "form-control js-domain-select js-disabled", onchange = "this.form.submit();" })
+                                </div>
+                           
+                        }
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div id="content-wrapper">
+                  <br />
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/utiles")
+    <script type="text/javascript">
+        $.ajaxSetup({ cache: false });
+        var personPK;
+        var apiUI;
+        var dominio;
+        var usuarioNT;
+        var servicePK;
+        var ruta = "@Url.Content("~/locales")";
+
+        $(document).ready(function () {
+            $('#imageLogoSmall').hide();
+            apiUI= '@System.Configuration.ConfigurationManager.AppSettings["apiUI"]';
+            @*personPK = @User.Identity.GetPersonPK();
+            dominio="@User.Identity.GetDominio()";
+            usuarioNT="@User.Identity.GetUsuarioNT()";
+            servicePK = "@User.Identity.GetServicePK()"
+            idioma = "@User.Identity.GetIdioma()"*@
+            var ruta = "@Url.Content("~/locales")";
+
+            $U.init("@ViewBag.idiomaSelecionado");
+  ;
+        });
+    </script>
+    @Scripts.Render("~/bundles/App")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

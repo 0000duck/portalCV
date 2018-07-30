@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity
+@using ServiceLogin.Dto;
+<li class=@(ViewContext.RouteData.Values["Controller"].ToString() == "UiComponents" ? "active" : "")>
+    <a href="#" id="menu_111" class="dropdown-toggle" title="Menu Principal: Informes">
+        <i class="fa fa-line-chart"></i>
+        <span>@Resources.Language.administracion</span>
+        <i class="glyphicon glyphicon-chevron-right drop-icon"></i>
+    </a>
+    <ul class="submenu">
+        @if (User.Identity.GetEsAdmin())
+        {
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Region" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink(Resources.Language.regiones, "Index", "Region", null, new { title = "" })</li>
+        }
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Candidate" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink(Resources.Language.candidatos, "Index", "Candidate", null, new { title = "" })</li>
+       
+        @if (User.Identity.GetUsuarioNT() == "jpvicente")
+       {
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "PruebaServicio" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Servicio", "Index", "PruebaServicio", null, new { title = "" })</li>
+
+       }
+    </ul>
+</li>
+
+
+
+
+
+

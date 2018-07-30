@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://repositorio/arvatologws/arvatocontrol.asmx?wsdl" docRef="http://repositorio/arvatologws/arvatocontrol.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://repositorio/arvatologws/arvatocontrol.asmx" xmlns:q1="http://tempuri.org/" binding="q1:arvatocontrolSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://repositorio/arvatologws/arvatocontrol.asmx" xmlns:q2="http://tempuri.org/" binding="q2:arvatocontrolSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

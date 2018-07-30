@@ -1,0 +1,162 @@
+﻿/* En este fichero estarán contenidos los estilos del tema de Arvato */
+.theme-blue #header-navbar {
+    background-color: #0076B4;
+}
+
+.theme-blue .navbar > .container .navbar-brand {
+    background-color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo.navbar-brand > img {
+    height: 45px;
+}
+
+#login-logo {
+    background-color: white;
+}
+
+    #login-logo > img {
+        height: auto;
+    }
+
+.main-box-header > h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    #logo {
+        width: 120px;
+        padding-left: 10px;
+        margin-left: initial;
+    }
+}
+
+.widgetTable > div:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+.widgetTable > div:first-child {
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+}
+
+.widgetTable > div:last-child {
+    font-weight: bold;
+    background-color: #fff;
+    border-top: 1px solid #000;
+}
+
+.widgetTable {
+    padding: 5px;
+    font-size: 0.7em;
+}
+
+    .widgetTable > div > div:first-child {
+        font-weight: bold;
+        text-align: initial;
+    }
+
+    .widgetTable > div > div {
+        text-align: right;
+    }
+
+.DTTT.btn-group {
+    margin-top: 0;
+}
+
+    .DTTT.btn-group a.btn {
+        height: auto;
+        line-height: initial;
+    }
+
+.main-box {
+    border-radius: initial;
+    box-shadow: initial;
+}
+
+.loader {
+    background-image: url("../../img/loader.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ninja {
+    display: none;
+}
+
+.main-box h2 {
+    line-height: 40px;
+}
+
+.legend {
+    font-size: 0.8em;
+}
+
+#login-box .input-group .input-group-addon i {
+    color: #c0c0c0;
+}
+
+/* Estas cosas se debieran mover a otro fichero. Por ejemplo, index.css. Estos se cargarán por convención usando el framework de carga */
+.input-group-addon, .form-control {
+    border-color: #aaa;
+}
+
+.icon-box {
+    margin-top: 0;
+}
+
+.date, .dateContainer a {
+    height: 28px;
+    line-height: 0.6em;
+}
+
+#sel2 {
+    width: calc(90% - 30px);
+}
+
+.label-other, .fc-event.label-other {
+    background-color: #c0c0c0;
+}
+
+.label-today, .fc-event.label-today {
+    background-color: #01b9fe;
+}
+
+/* Styles for hide validation summary on no errors */
+.validation-summary-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border-color: #fa3131;
+}
+
+    .input-validation-error:focus {
+        border-color: #c0392b;
+        /*outline: 0;*/
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 6px #c0392b;
+    }
+
+#datos {
+    width: 100% !Important;
+}
+
+/* Styles for replacing missing TableTools styles. Remove when new components installed */
+tr.active, tr.active > td {
+    background-color: dodgerblue !important;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #c0392b;
+    color: #c0392b;
+}
+
+#content-wrapper {
+    background-color: #fff;
+}

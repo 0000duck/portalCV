@@ -1,0 +1,125 @@
+﻿@model Arvato.PortalCandidato.UI.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    var domains = ViewBag.domains;
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8">
+            <h1>Entrar en Arvato</h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group has-feedback">
+            <label>Usuario</label>
+            @Html.TextBoxFor(m => m.UserName, new { @class = "js-disabled", placeholder = "Usuario" })
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group has-feedback">
+            <label>Contraseña</label>
+            @if (Model != null)
+            {
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control js-disabled", placeholder = "Contraseña", @Autocomplete = "off", value = Model.Password })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            }
+            else
+            {
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control js-disabled", placeholder = "Contraseña", @Autocomplete = "off" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            }
+
+        </div>
+    </div>
+    if (ViewBag.Visible)
+    {
+        <div class="row">
+            <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group has-feedback">
+                <label>Plataforma</label>
+                @Html.TextBox("DomainText", "", new { @id = "txtDomain", @class = "form-control js-domain-select js-disabled" })
+                @Html.ValidationMessage("DomainText", "", new { @class = "text-danger" })
+                @Html.HiddenFor(m => m.Domain, new { @id = "valueDomain", @class = "form-control js-domain-select js-disabled" })
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group has-feedback">
+            <label>Idioma</label>
+            @Html.DropDownList("Idioma", (IEnumerable<SelectListItem>)ViewBag.idiomas, new { @id = "txtDomain", @class = "form-control js-domain-select js-disabled" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group">
+            <input type="submit" value="Entrar" class="btn btn-primary js-btn-analisis" />
+            <input type="button" value="Evaluar" class="btn btn-primary js-btn-evaluar hidden" />
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group">
+            <div class="checkbox">
+                <input id="remember-me" name="RememberMe" type="checkbox">
+                <label for="remember-me">Recuerdame</label>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="suplantar" style="display:none">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8 form-group">
+            <div class="checkbox">
+                <input id="Suplantar" name="Suplantar" type="checkbox" value="True" />
+                <label for="Suplantar">Suplantar</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-2 col-sm-8 col-md-8">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+    </div>
+}
+
+@section scripts{
+
+    <script src="~/Scripts/Views/Login/LoginController.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var source = [];
+            var listadoDominio = @(new HtmlString(Json.Encode(domains)));
+            for (var i = 0; i < listadoDominio.length; i++) {
+                source.push({
+                    label: listadoDominio[i].text,
+                    value: listadoDominio[i].id
+                });
+            }
+            $('select').select2();
+
+            $("#txtDomain").autocomplete({
+                source: source,
+                focus: function (event, ui) {
+
+                    event.preventDefault();
+                    $("#txtDomain").val(ui.item.text);
+                },
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#valueDomain").val(ui.item.value);
+                    $("#txtDomain").val(ui.item.label);
+                }
+            });
+
+        });
+    </script>
+}
+

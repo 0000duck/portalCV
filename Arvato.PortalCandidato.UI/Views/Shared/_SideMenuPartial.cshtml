@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNet.Identity
+@using ServiceLogin.Dto;
+<li class=@(ViewContext.RouteData.Values["Controller"].ToString() == "UiComponents" ? "active" : "")>
+    <a href="#" id="menu_111" class="dropdown-toggle" title="Menu Principal: Informes">
+        <i class="fa fa-line-chart"></i>
+        <span>UiComponents</span>
+        <i class="glyphicon glyphicon-chevron-right drop-icon"></i>
+    </a>
+    <ul class="submenu">
+        <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "UiComponents" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Ejemplos", "Index", "UiComponents", null, new { title = "" })</li>
+    </ul>
+</li>
+
+
+
+

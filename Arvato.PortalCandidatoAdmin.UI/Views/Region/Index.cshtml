@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Arvato.PortalCandadato.Shared.DTO.RegionDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-10 col-md-10 col-sm-10">
+<h2>@Resources.Language.administrar_regiones</h2>
+
+<p>
+   
+</p>
+
+    <table class="tablaArvato" id="tabla">
+        <thead>
+            <tr>
+                <th>
+                    @Resources.Language.sede
+                </th>
+                <th>
+                    @Resources.Language.regiones
+                </th>
+                <th>
+                    Email
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SedeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="form-group" id="idError">
+    <p class="text-danger">@ViewBag.error</p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/region")
+}

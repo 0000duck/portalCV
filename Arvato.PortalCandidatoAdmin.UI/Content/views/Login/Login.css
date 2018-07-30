@@ -1,0 +1,72 @@
+﻿
+
+#login-page {
+    background: url("../../../img/fondo/deathStart2.jpg");
+    background-repeat: no-repeat;
+    /*background-size: 100% 100%;*/
+}
+
+
+@media screen and (min-width: 1350px) {
+    #login-page {
+        background: url("../../../img/fondo/deathStart2.jpg");
+        background-repeat: no-repeat;
+        /*background-size: 100% 100%;*/
+    }
+}
+
+#login-logo {
+    background-color: white;
+    height: 20%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.max-alto {
+    height: 100%;
+}
+
+.img-login {
+    width: auto;
+    height: 100%;
+    margin-left: -3%;
+}
+
+.columnaDerecha {
+    background-color: white;
+    z-index: 2;
+    overflow-y: auto;
+    /*padding: 0px 10% 0px 5%;*/
+}
+
+.azulado {
+}
+
+.tituloLogin {
+    margin-top: 5.25rem;
+    color: #FFF;
+    font-size: 1.625rem;
+    font-weight: bolder;
+}
+
+.desciprcionLogin {
+    color: #FFF;
+    font-size: 1.15rem;
+}
+
+.idioma {
+    top: 1.5rem;
+    color: #3498db;
+}
+
+.form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+.js-btn-evaluar,
+.js-btn-analisis {
+    min-width: 100%;
+}

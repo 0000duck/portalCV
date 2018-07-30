@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>@ViewBag.Title - Arvato Template</title>
+
+    @Styles.Render("~/Styles/css")
+
+    <!-- Favicon -->
+    <link type="image/x-icon" href="@Url.Content("~/Content/favicon.png")" rel="shortcut icon" />
+
+    <!-- google font libraries -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+
+    <!-- this page specific inline scripts -->
+    <link href="~/Content/arvato/arvato-style-static.css" rel="stylesheet" />
+    <link href="~/Content/views/Login/Login.css" rel="stylesheet" />
+    
+    @RenderSection("styles", required: false)
+</head>
+<body id="login-page" class="theme-blue">
+    <div class="container max-alto">
+        <div class="row max-alto">
+            <div class="col-xs-6 col-sm-6 col-md-6 max-alto azulado">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-8 col-md-8 col-xs-8">
+                        <h1 class="tituloLogin">Template</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-offset-2 col-xs-offset-2 col-sm-8 col-md-8 col-xs-8">
+
+                        <p class="desciprcionLogin">
+Template Basico de MVC con web Api
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 max-alto columnaDerecha">
+                @*<div class="row">
+                    <div class="col-md-offset-8 col-sm-offset-8 col-sm-4 col-md-4">
+                        <span class="idioma">Castellano<i class="fa fa-angle-down"></i></span>
+                    </div>
+                </div>*@
+                <div class="row">
+                    <div class="col-md-offset-2 col-sm-offset-8 col-sm-8 col-md-8">
+                        <div id="login-logo">
+                            <img src="~/img/logo_medio.png" />
+                        </div>
+                    </div>
+                </div>
+                @RenderBody()
+                <div class="row">
+                    <div class="LogoIT">
+                        <img src="~/img/LogoIT.png" />
+                    </div>
+                    <div style="text-align:center">
+                        <span>@DateTime.Today.Year <a href="#" target="">Arvato Template</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/App")
+
+    <script type="text/javascript">
+        $.ajaxSetup({ cache: false });
+        var apiSolicitud;
+        var apiMonito;
+        var apiCatalogoValores;
+        var apiCapacity;
+        var apiEstructura;
+        var apiFormacionInicial;
+        var apiPlanTQ;
+        var apiMonitorizaciones;
+        var apiPDI;
+        var apiAlerta;
+        var apiCalidadEtt;
+        var apiCampanas;
+        var apiComunicados;
+        var apiCalibraciones;
+        var apiAuditorias;
+
+        $(document).ready(function () {
+            $('#imageLogoSmall').hide();
+            apiSolicitud = '@System.Configuration.ConfigurationManager.AppSettings["apiSolicitud"]';
+            apiMonito = '@System.Configuration.ConfigurationManager.AppSettings["apiMonito"]';
+            apiCatalogoValores = '@System.Configuration.ConfigurationManager.AppSettings["apiCatalogoValores"]';
+            apiCapacity = '@System.Configuration.ConfigurationManager.AppSettings["apiCapacity"]';
+            apiEstructura = '@System.Configuration.ConfigurationManager.AppSettings["apiEstructura"]';
+            apiFormacionInicial = '@System.Configuration.ConfigurationManager.AppSettings["apiFormacionInicial"]';
+            apiPlanTQ = '@System.Configuration.ConfigurationManager.AppSettings["apiPlanTQ"]';
+            apiMonitorizaciones = '@System.Configuration.ConfigurationManager.AppSettings["apiMonitorizaciones"]';
+            apiPDI = '@System.Configuration.ConfigurationManager.AppSettings["apiPDI"]';
+            apiTest = '@System.Configuration.ConfigurationManager.AppSettings["apiTest"]';
+            apiAlerta = '@System.Configuration.ConfigurationManager.AppSettings["apiAlerta"]';
+            apiCalidadEtt = '@System.Configuration.ConfigurationManager.AppSettings["apiCalidadEtt"]';
+            apiCampanas = '@System.Configuration.ConfigurationManager.AppSettings["apiCampanas"]';
+            apiComunicados = '@System.Configuration.ConfigurationManager.AppSettings["apiComunicados"]';
+            apiCalibraciones = '@System.Configuration.ConfigurationManager.AppSettings["apiCalibraciones"]';
+            apiAuditorias= '@System.Configuration.ConfigurationManager.AppSettings["apiAuditorias"]';
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

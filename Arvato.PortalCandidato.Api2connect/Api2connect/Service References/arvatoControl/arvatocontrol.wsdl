@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertarEvento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoEvento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="modulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="resultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarEventoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarEventoResult" type="tns:resultadoEvento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="resultadoEvento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="resultado" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="prefijo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertarDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="evento" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefijo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="variable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarDetalleResult" type="tns:resultadoEvento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarEventos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEvento" nillable="true" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prefijo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdAplicacion" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdTipoEvento" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdAccion" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Modulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Resultado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaDesde" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaHasta" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="IpServidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IpCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarEventosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarEventosResult" type="tns:ArrayOfSP_Consultar_Eventos_Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSP_Consultar_Eventos_Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SP_Consultar_Eventos_Result" nillable="true" type="tns:SP_Consultar_Eventos_Result" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SP_Consultar_Eventos_Result">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ComplexObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IDEvento" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Prefijo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IDAplicacion" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IDTipoEvento" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IDAccion" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Modulo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resultado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Fecha" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="IPServidor" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IPCliente" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ComplexObject" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:StructuralObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StructuralObject" abstract="true" />
+      <s:element name="consultarDetalles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdDetalle" nillable="true" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdEvento" nillable="true" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prefijo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Variable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarDetallesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarDetallesResult" type="tns:ArrayOfSP_Consultar_Detalles_Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSP_Consultar_Detalles_Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SP_Consultar_Detalles_Result" nillable="true" type="tns:SP_Consultar_Detalles_Result" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SP_Consultar_Detalles_Result">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ComplexObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IDDetalle" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IDEvento" nillable="true" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Prefijo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Variable" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertarEventoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEvento" />
+  </wsdl:message>
+  <wsdl:message name="insertarEventoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarEventosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarEventos" />
+  </wsdl:message>
+  <wsdl:message name="consultarEventosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarEventosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetallesSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarDetalles" />
+  </wsdl:message>
+  <wsdl:message name="consultarDetallesSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarDetallesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="arvatocontrolSoap">
+    <wsdl:operation name="insertarEvento">
+      <wsdl:input message="tns:insertarEventoSoapIn" />
+      <wsdl:output message="tns:insertarEventoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalle">
+      <wsdl:input message="tns:insertarDetalleSoapIn" />
+      <wsdl:output message="tns:insertarDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarEventos">
+      <wsdl:input message="tns:consultarEventosSoapIn" />
+      <wsdl:output message="tns:consultarEventosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalles">
+      <wsdl:input message="tns:consultarDetallesSoapIn" />
+      <wsdl:output message="tns:consultarDetallesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="arvatocontrolSoap" type="tns:arvatocontrolSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarEvento">
+      <soap:operation soapAction="http://tempuri.org/insertarEvento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalle">
+      <soap:operation soapAction="http://tempuri.org/insertarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEventos">
+      <soap:operation soapAction="http://tempuri.org/consultarEventos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalles">
+      <soap:operation soapAction="http://tempuri.org/consultarDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="arvatocontrolSoap12" type="tns:arvatocontrolSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertarEvento">
+      <soap12:operation soapAction="http://tempuri.org/insertarEvento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalle">
+      <soap12:operation soapAction="http://tempuri.org/insertarDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEventos">
+      <soap12:operation soapAction="http://tempuri.org/consultarEventos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDetalles">
+      <soap12:operation soapAction="http://tempuri.org/consultarDetalles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="arvatocontrol">
+    <wsdl:port name="arvatocontrolSoap" binding="tns:arvatocontrolSoap">
+      <soap:address location="http://repositorio/arvatologws/arvatocontrol.asmx" />
+    </wsdl:port>
+    <wsdl:port name="arvatocontrolSoap12" binding="tns:arvatocontrolSoap12">
+      <soap12:address location="http://repositorio/arvatologws/arvatocontrol.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

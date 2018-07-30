@@ -1,0 +1,158 @@
+﻿@model IEnumerable<Arvato.PortalCandadato.Shared.DTO.CandidateDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Any())
+{
+<div class="col-lg-11 col-md-11 col-sm-11">
+
+    <div class="row">
+        <div class="form-group col-md-4">
+            <h2>@Resources.Language.lista_candidatos</h2>
+            <label class="control-label">@Resources.Language.flitro_region</label>
+            <div class="form-group-select2">
+                <div class="col-md-10" id="IdRegioness">
+                    @Html.DropDownList(Resources.Language.regiones, (IEnumerable<SelectListItem>)ViewBag.regiones, htmlAttributes: new { @class = "form-control js-multiple-original", @id = "IdRegiones", @placeholder = "Seleccione una Region", @multiple = "multiple" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:80px" class="row">
+
+    
+            <table class="tablaArvato" id="tablaCandidate">
+                <thead>
+                    <tr>
+                        <th>
+                            @Resources.Language.fecha_insercion
+                        </th>
+                        <th>
+                            @Resources.Language.nombre
+                        </th>
+                        <th>
+                            @Resources.Language.apellidos
+                        </th>
+                        <th>
+                            @Resources.Language.regiones
+                        </th>
+                        <th>
+                            @Resources.Language.telefono
+                        </th>
+                        <th>
+                            @Resources.Language.email
+                        </th>
+                        <th>
+                            @Resources.Language.cv
+                        </th>
+
+                        <th>
+                            @Resources.Language.eliminar
+                        </th>
+                        <th>
+                            @Resources.Language.visto
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TimeIn)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Surname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.RegionsIds)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telephone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td class="dt-center">
+                                <button name="/portalCandidatoAdmin/Candidate/Descarga/@item.Id" id="@item.Id" class="btn btn-link" onclick="VerCV(this)"><i class="fa fa-eye fa-2x"></i></button>
+                                @*<a  class="btn btn-link" href="/Candidate/Descarga/@item.Id" download="CV_@item.Name"><i class="fa fa-eye fa-2x"></i></a>*@
+
+                            </td>
+
+                            <td class="dt-center">
+                                <a id="@item.Id" href="/portalCandidatoAdmin/Candidate/Delete/@item.Id"><i class="fa fa-trash fa-2x"></i></a>
+                                @*@Html.ActionLink("", "Delete", new { id = item.Id, })*@
+                            </td>
+                            <td class="dt-center" id="eye_@item.Id">
+                                <button class="btn btn-link">
+                                    @if (@item.IsRead)
+                                    {
+                                        <i class="fa fa-eye fa-2x"></i>
+
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-eye-slash fa-2x"></i>
+
+                                    }
+                                </button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    </div>
+    <div class="row" id="idError">
+
+        <p class="text-danger">@ViewBag.error</p>
+    </div>
+    <button class="btn btn-info" id="idExcel"><i class="fa fa-file-excel-o"></i></button>
+</div>
+        }
+        else {
+            <h3>@Resources.Language.no_candidatos</h3>
+        }
+
+
+
+
+
+<div class="modal largeModal fade" id="ModalPDF" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog largeModal">
+        <div class="modal-content largeModal">
+            <div class="modal-header largeModal">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title largeModal"></h3>
+            </div>
+            <div id="contentDetalleMonitoModal" class="modal-body largeModal">
+                <span>Vista del CV</span>
+                <iframe src=""
+                        id="frame"
+                         width="100%" 
+                         height="100%"
+                        oncontextmenu="return false">
+
+                </iframe>
+        @*<embed src="" 
+               width="100%" 
+               height="100%" 
+               allowscriptaccess="always"
+               allowfullscreen="true"
+               wmode="transparent"
+               oncontextmenu="return false"  >*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/candidate")
+}

@@ -1,0 +1,232 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.UI", "1.UI", "{F18B39FA-E19F-4AE0-95A8-630291FE817E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.API", "2.API", "{85280236-213E-426A-BF82-BAF4E03C446F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Service", "3.Service", "{2E8A3AFC-00DA-4FBA-A5C3-2DD2556CD167}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Model", "4.Model", "{62473316-3F6D-4D22-B931-47F20271E038}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Shared", "5.Shared", "{93CDD442-9ABC-4BDE-95D5-30781BB635E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Test", "6.Test", "{2C71169B-30CD-4B1C-B181-DF834EA9C355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.Model", "Arvato.PortalCandidato.Model\Arvato.PortalCandidato.Model.csproj", "{9AC4E080-8077-48C7-B924-AD9F86B9D332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.Service", "Arvato.PortalCandidato.Service\Arvato.PortalCandidato.Service.csproj", "{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandadato.Shared.DTO", "Arvato.PortalCandadato.Shared.DTO\Arvato.PortalCandadato.Shared.DTO.csproj", "{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.Api", "Arvato.PortalCandidato.Api\Arvato.PortalCandidato.Api.csproj", "{8DF0736C-3722-4CE4-9F75-608097BD2C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.UI.ServiceLogin", "Arvato.PortalCandidato.UI.ServiceLogin\Arvato.PortalCandidato.UI.ServiceLogin.csproj", "{1104DD16-E146-4146-91D5-8E3F79DA1011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.UI.Service", "Arvato.PortalCandidato.Model.Client\Arvato.PortalCandidato.UI.Service.csproj", "{F8073909-F01E-4A75-80CB-CF7643875121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidatoAdmin.UI", "Arvato.PortalCandidatoAdmin.UI\Arvato.PortalCandidatoAdmin.UI.csproj", "{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api2connect", "Arvato.PortalCandidato.Api2connect\Api2connect\Api2connect.csproj", "{75A1CA4B-5085-4128-841D-0F3C0F07999F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.UI", "Arvato.PortalCandidato.UI\Arvato.PortalCandidato.UI.csproj", "{FCD5CFB1-210A-46EF-9753-906AB372620D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.Consola", "7.Consola", "{87B9318A-1808-4A67-8446-47E36FD5A094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvato.PortalCandidato.AppConsola", "Arvato.PortalCandidato.AppConsola\Arvato.PortalCandidato.AppConsola.csproj", "{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|x64.ActiveCfg = Debug|x86
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|x64.Build.0 = Debug|x86
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|x86.ActiveCfg = Debug|x86
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Debug|x86.Build.0 = Debug|x86
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|x64.ActiveCfg = Release|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|x64.Build.0 = Release|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|x86.ActiveCfg = Release|Any CPU
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332}.Release|x86.Build.0 = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|x64.ActiveCfg = Debug|x86
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|x64.Build.0 = Debug|x86
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|x86.ActiveCfg = Debug|x86
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Debug|x86.Build.0 = Debug|x86
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|x64.Build.0 = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8}.Release|x86.Build.0 = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|x64.ActiveCfg = Debug|x86
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|x64.Build.0 = Debug|x86
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|x86.ActiveCfg = Debug|x86
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Debug|x86.Build.0 = Debug|x86
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|x64.ActiveCfg = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|x64.Build.0 = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|x86.ActiveCfg = Release|Any CPU
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B}.Release|x86.Build.0 = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|x64.ActiveCfg = Debug|x86
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|x64.Build.0 = Debug|x86
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|x86.ActiveCfg = Debug|x86
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Debug|x86.Build.0 = Debug|x86
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|x64.ActiveCfg = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|x64.Build.0 = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84}.Release|x86.Build.0 = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|x64.ActiveCfg = Debug|x86
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|x64.Build.0 = Debug|x86
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|x86.ActiveCfg = Debug|x86
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Debug|x86.Build.0 = Debug|x86
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|x64.ActiveCfg = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|x64.Build.0 = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|x86.ActiveCfg = Release|Any CPU
+		{1104DD16-E146-4146-91D5-8E3F79DA1011}.Release|x86.Build.0 = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|x64.ActiveCfg = Debug|x86
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|x64.Build.0 = Debug|x86
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|x86.ActiveCfg = Debug|x86
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Debug|x86.Build.0 = Debug|x86
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|x64.ActiveCfg = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|x64.Build.0 = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8073909-F01E-4A75-80CB-CF7643875121}.Release|x86.Build.0 = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|x64.ActiveCfg = Debug|x86
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|x64.Build.0 = Debug|x86
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|x86.ActiveCfg = Debug|x86
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Debug|x86.Build.0 = Debug|x86
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|x64.Build.0 = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8}.Release|x86.Build.0 = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|x64.ActiveCfg = Debug|x86
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|x64.Build.0 = Debug|x86
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|x86.ActiveCfg = Debug|x86
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Debug|x86.Build.0 = Debug|x86
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|x64.ActiveCfg = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|x64.Build.0 = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|x86.ActiveCfg = Release|Any CPU
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F}.Release|x86.Build.0 = Release|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|x64.ActiveCfg = Debug|x86
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|x64.Build.0 = Debug|x86
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|x86.ActiveCfg = Debug|x86
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Debug|x86.Build.0 = Debug|x86
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|x64.ActiveCfg = Release|x64
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|x64.Build.0 = Release|x64
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|x86.ActiveCfg = Release|Any CPU
+		{FCD5CFB1-210A-46EF-9753-906AB372620D}.Release|x86.Build.0 = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|x64.Build.0 = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Debug|x86.Build.0 = Debug|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|x64.ActiveCfg = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|x64.Build.0 = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AC4E080-8077-48C7-B924-AD9F86B9D332} = {62473316-3F6D-4D22-B931-47F20271E038}
+		{18DFCB5B-B5AF-4EF3-A558-7B2ACFD786C8} = {2E8A3AFC-00DA-4FBA-A5C3-2DD2556CD167}
+		{26AE1EA9-175A-4032-8EC4-FABCB4F6353B} = {93CDD442-9ABC-4BDE-95D5-30781BB635E9}
+		{8DF0736C-3722-4CE4-9F75-608097BD2C84} = {85280236-213E-426A-BF82-BAF4E03C446F}
+		{1104DD16-E146-4146-91D5-8E3F79DA1011} = {F18B39FA-E19F-4AE0-95A8-630291FE817E}
+		{F8073909-F01E-4A75-80CB-CF7643875121} = {F18B39FA-E19F-4AE0-95A8-630291FE817E}
+		{7F80A2C9-DE17-45EA-B090-3E481DD64AF8} = {F18B39FA-E19F-4AE0-95A8-630291FE817E}
+		{75A1CA4B-5085-4128-841D-0F3C0F07999F} = {85280236-213E-426A-BF82-BAF4E03C446F}
+		{FCD5CFB1-210A-46EF-9753-906AB372620D} = {F18B39FA-E19F-4AE0-95A8-630291FE817E}
+		{B79A5CE2-07DB-4412-BED6-7D4FA22D85B1} = {87B9318A-1808-4A67-8446-47E36FD5A094}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.20.56.120:8080/tfs/arvatocrm
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Arvato.PortalCandadato.Shared.DTO\\Arvato.PortalCandadato.Shared.DTO.csproj
+		SccProjectTopLevelParentUniqueName1 = Arvato.PortalCandidato.sln
+		SccProjectName1 = Arvato.PortalCandadato.Shared.DTO
+		SccLocalPath1 = Arvato.PortalCandadato.Shared.DTO
+		SccProjectUniqueName2 = Arvato.PortalCandidato.Api2connect\\Api2connect\\Api2connect.csproj
+		SccProjectTopLevelParentUniqueName2 = Arvato.PortalCandidato.sln
+		SccProjectName2 = Arvato.PortalCandidato.Api2connect/Api2connect
+		SccLocalPath2 = Arvato.PortalCandidato.Api2connect\\Api2connect
+		SccProjectUniqueName3 = Arvato.PortalCandidato.Api\\Arvato.PortalCandidato.Api.csproj
+		SccProjectTopLevelParentUniqueName3 = Arvato.PortalCandidato.sln
+		SccProjectName3 = Arvato.PortalCandidato.Api
+		SccLocalPath3 = Arvato.PortalCandidato.Api
+		SccProjectUniqueName4 = Arvato.PortalCandidato.Model.Client\\Arvato.PortalCandidato.UI.Service.csproj
+		SccProjectTopLevelParentUniqueName4 = Arvato.PortalCandidato.sln
+		SccProjectName4 = Arvato.PortalCandidato.Model.Client
+		SccLocalPath4 = Arvato.PortalCandidato.Model.Client
+		SccProjectUniqueName5 = Arvato.PortalCandidato.Model\\Arvato.PortalCandidato.Model.csproj
+		SccProjectTopLevelParentUniqueName5 = Arvato.PortalCandidato.sln
+		SccProjectName5 = Arvato.PortalCandidato.Model
+		SccLocalPath5 = Arvato.PortalCandidato.Model
+		SccProjectUniqueName6 = Arvato.PortalCandidato.Service\\Arvato.PortalCandidato.Service.csproj
+		SccProjectTopLevelParentUniqueName6 = Arvato.PortalCandidato.sln
+		SccProjectName6 = Arvato.PortalCandidato.Service
+		SccLocalPath6 = Arvato.PortalCandidato.Service
+		SccProjectUniqueName7 = Arvato.PortalCandidato.UI.ServiceLogin\\Arvato.PortalCandidato.UI.ServiceLogin.csproj
+		SccProjectTopLevelParentUniqueName7 = Arvato.PortalCandidato.sln
+		SccProjectName7 = Arvato.PortalCandidato.UI.ServiceLogin
+		SccLocalPath7 = Arvato.PortalCandidato.UI.ServiceLogin
+		SccProjectUniqueName8 = Arvato.PortalCandidato.UI\\Arvato.PortalCandidato.UI.csproj
+		SccProjectTopLevelParentUniqueName8 = Arvato.PortalCandidato.sln
+		SccProjectName8 = Arvato.PortalCandidato.UI
+		SccLocalPath8 = Arvato.PortalCandidato.UI
+		SccProjectUniqueName9 = Arvato.PortalCandidatoAdmin.UI\\Arvato.PortalCandidatoAdmin.UI.csproj
+		SccProjectTopLevelParentUniqueName9 = Arvato.PortalCandidato.sln
+		SccProjectName9 = Arvato.PortalCandidatoAdmin.UI
+		SccLocalPath9 = Arvato.PortalCandidatoAdmin.UI
+		SccProjectUniqueName10 = Arvato.PortalCandidato.AppConsola\\Arvato.PortalCandidato.AppConsola.csproj
+		SccProjectTopLevelParentUniqueName10 = Arvato.PortalCandidato.sln
+		SccProjectName10 = Arvato.PortalCandidato.AppConsola
+		SccLocalPath10 = Arvato.PortalCandidato.AppConsola
+	EndGlobalSection
+EndGlobal
